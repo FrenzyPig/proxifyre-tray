@@ -42,6 +42,7 @@
             this.labelApps = new System.Windows.Forms.Label();
             this.labelPort = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
+            this.checkBoxBypassLan = new System.Windows.Forms.CheckBox();
             this.checkBoxTcp = new System.Windows.Forms.CheckBox();
             this.checkBoxUdp = new System.Windows.Forms.CheckBox();
             this.textBoxPort = new System.Windows.Forms.TextBox();
@@ -212,6 +213,19 @@
             this.labelPassword.Size = new System.Drawing.Size(63, 15);
             this.labelPassword.TabIndex = 18;
             this.labelPassword.Text = "Password";
+            // 
+            // checkBoxBypassLan
+            // 
+            this.checkBoxBypassLan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxBypassLan.AutoSize = true;
+            this.checkBoxBypassLan.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxBypassLan.Location = new System.Drawing.Point(445, 115);
+            this.checkBoxBypassLan.Name = "checkBoxBypassLan";
+            this.checkBoxBypassLan.Size = new System.Drawing.Size(55, 23);
+            this.checkBoxBypassLan.TabIndex = 19;
+            this.checkBoxBypassLan.Text = "LAN Bypass";
+            this.checkBoxBypassLan.UseVisualStyleBackColor = true;
+            this.checkBoxBypassLan.Validated += new System.EventHandler(this.checkBoxBypassLan_Validated);
             // 
             // checkBoxTcp
             // 
@@ -448,6 +462,7 @@
             this.Controls.Add(this.textBoxPort);
             this.Controls.Add(this.checkBoxUdp);
             this.Controls.Add(this.checkBoxTcp);
+            this.Controls.Add(this.checkBoxBypassLan);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelPort);
             this.Controls.Add(this.labelApps);
@@ -495,6 +510,7 @@
         private System.Windows.Forms.Label labelApps;
         private System.Windows.Forms.Label labelPort;
         private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.CheckBox checkBoxBypassLan;
         private System.Windows.Forms.CheckBox checkBoxTcp;
         private System.Windows.Forms.CheckBox checkBoxUdp;
         private System.Windows.Forms.TextBox textBoxPort;

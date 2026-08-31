@@ -130,6 +130,10 @@ namespace proxifyre_tray
             {
                 comboBoxLogLevel.Text = configuration.logLevel;
             }
+            if (configuration.bypassLan)
+            {
+                checkBoxBypassLan.Checked = true;
+            }
             updateProxies(0);
         }
 
@@ -394,6 +398,11 @@ namespace proxifyre_tray
             {
                 setSupportedProtocols(checkBoxUdp.Checked, "UDP");
             }
+        }
+
+        private void checkBoxBypassLan_Validated(object sender, EventArgs e)
+        {
+            configuration.bypassLan = checkBoxBypassLan.Checked;
         }
 
         private void comboBoxLogLevel_Validated(object sender, EventArgs e)

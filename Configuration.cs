@@ -14,6 +14,7 @@ namespace proxifyre_tray
         }
 
         public string logLevel;
+        public bool bypassLan;
         public List<Proxy> proxies;
     }
 }
